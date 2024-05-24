@@ -133,8 +133,8 @@ class TransformLoader:
         if aug:
             transform_list = ['RandomResizedCrop', 'ImageJitter', 'RandomHorizontalFlip', 'ToTensor', 'Normalize']
         else:
-            transform_list = ['Resize','CenterCrop', 'ToTensor', 'Normalize']
-            # transform_list = ['ToTensor', 'Normalize']
+            # transform_list = ['Resize','CenterCrop', 'ToTensor', 'Normalize']
+            transform_list = ['ToTensor', 'Normalize']
 
         transform_funcs = [ self.parse_transform(x) for x in transform_list]
         transform = transforms.Compose(transform_funcs)
@@ -155,7 +155,7 @@ class SimpleDataManager(DataManager):
         transform = self.trans_loader.get_composed_transform(aug)
         dataset = SimpleDataset(transform)
 
-        data_loader_params = dict(batch_size=self.batch_size, shuffle=True, drop_last=True, num_workers=12,
+        data_loader_params = dict(batch_size=self.batch_size, shuffle=True, drop_last=True, num_workers=2,
                                   pin_memory=True)
         data_loader = torch.utils.data.DataLoader(dataset, **data_loader_params)
 
