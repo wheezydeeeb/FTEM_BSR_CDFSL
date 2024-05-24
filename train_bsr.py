@@ -7,7 +7,7 @@ import configs
 from methods.baselinetrain_bsr import BSRTrain
 
 from io_utils import model_dict, parse_args
-from datasets import miniImageNet_few_shot
+from datasets import AFE
 
 
 def train(base_loader, model, optimization, start_epoch, stop_epoch, params):
@@ -39,7 +39,7 @@ if __name__=='__main__':
     image_size = 224
     optimization = 'SGD'
 
-    datamgr = miniImageNet_few_shot.SimpleDataManager(image_size, batch_size=16)
+    datamgr = AFE.SimpleDataManager(image_size, batch_size=16)
     base_loader = datamgr.get_data_loader(aug=params.train_aug)
 
     model = BSRTrain(model_dict[params.model], params.num_classes, lamda=params.lamda)
