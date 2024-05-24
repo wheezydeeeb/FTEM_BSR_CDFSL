@@ -166,6 +166,9 @@ class ResNet(nn.Module):
 def ResNet10( flatten = True):
     return ResNet(SimpleBlock, [1,1,1,1],[64,128,256,512], flatten)
 
+def ResNet18( flatten = True):
+    return ResNet(SimpleBlock, [2,2,2,2],[64,128,256,512], flatten)
+
 
 
 
