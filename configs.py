@@ -1,6 +1,6 @@
 save_dir                    = './models'
 
-miniImageNet_path           	= '/ssd/miniImagenet'
+miniImageNet_path           	= '/content/FTEM_BSR_CDFSL/ssd/miniImagenet'
 
 ISIC_path = "/ssd/data/ISIC"
 ChestX_path = "/ssd/data/chestX"
