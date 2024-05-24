@@ -36,7 +36,7 @@ if __name__=='__main__':
     np.random.seed(10)
     params = parse_args('train')
 
-    image_size = 224
+    image_size = 112
     optimization = 'SGD'
 
     datamgr = AFE.SimpleDataManager(image_size, batch_size=16)
