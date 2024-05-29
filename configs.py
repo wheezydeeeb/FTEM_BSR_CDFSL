@@ -2,7 +2,7 @@ save_dir                    = './models'
 
 # miniImageNet_path           	= '/content/ssd/FE/A'
 
-AFE_path = '/content/ssd/FE/A'
+AFE_path = '/kaggle/working/FE/A'
 
 ISIC_path = "/ssd/data/ISIC"
 ChestX_path = "/ssd/data/chestX"
